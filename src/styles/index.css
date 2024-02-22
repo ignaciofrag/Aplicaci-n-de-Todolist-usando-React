@@ -1,12 +1,80 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 
-/* 
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.titulo-todo {
+  margin-top: 2rem;
+  font-size: 50px;
+  color: #cc9a9a;
+  font-family: "Smooch Sans", sans-serif;
+  font-weight: lighter;
+}
 
-*/
+.todo-container {
+  background: rgb(237, 236, 236);
+  width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: "Smooch Sans", sans-serif;
+  font-weight: lighter;
+  border-radius: 20px;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  font-size: 18px;
+  color: #4d4d4d;
+  border-bottom: 1px solid #ededed;
+  background-color: rgb(237, 236, 236);
+}
+
+.todo-input::placeholder {
+  font-style: italic;
+  color: #4d4d4d;
+  background-color: rgb(237, 236, 236);
+  font-weight: lighter;
+}
+
+.todo-input:focus {
+  outline: none;
+  background-color: rgb(237, 236, 236);
+
+}
+
+.boton-oculto {
+  display: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #4d4d4d;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ededed;
+}
+
+.boton-eliminar {
+  color: #cc9a9a;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.todo-item:hover .boton-eliminar {
+  visibility: visible;
+}
+
+.items-restantes {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
