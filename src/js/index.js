@@ -13,5 +13,5 @@ ReactDOM.render(
   <React.StrictMode>
     <Home />
   </React.StrictMode>,
-  document.getElementById("app") // Asegúrate de que el ID coincide con el contenedor en tu index.html
+  document.getElementById("app")
 );
