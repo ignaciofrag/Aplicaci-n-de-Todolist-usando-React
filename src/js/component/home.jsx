@@ -11,7 +11,7 @@ function Home() {
 
   const [todos, setTodos] = useState(initialTodos);
   const [input, setInput] = useState("");
-  const username = "tuNombreDeUsuario"; // Asegúrate de cambiar esto por tu nombre de usuario real
+  const username = "NombreUser"; 
   const apiUrl = `https://playground.4geeks.com/apis/fake/todos/user/${username}`;
 
   useEffect(() => {
