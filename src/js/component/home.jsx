@@ -25,7 +25,7 @@ function Home() {
       .then((data) => {
         if (Array.isArray(data) && data.length > 0) {
           const formattedTodos = data.map((todo) => ({
-            id: todo.id || todo.label, // Corrección: asegúrate de que la API devuelve un ID único o genera uno tú mismo
+            id: todo.id || todo.label, 
             text: todo.label,
             done: todo.done,
           }));
@@ -34,7 +34,6 @@ function Home() {
       })
       .catch((error) => {
         console.log(error);
-        // Intentar crear un nuevo usuario si no existe
         fetch(apiUrl, {
           method: 'POST',
           body: JSON.stringify([]),
@@ -67,7 +66,7 @@ function Home() {
       }
     })
     .then(() => {
-      setTodos([]); // Limpiar todos en el estado local
+      setTodos([]); 
     })
     .catch(error => console.log(error));
   };
@@ -82,7 +81,7 @@ function Home() {
     })
     .then(resp => resp.json())
     .then(() => {
-      setTodos(newTodos); // Actualizar el estado local con la nueva lista de tareas
+      setTodos(newTodos); 
     })
     .catch(error => console.log(error));
   };
